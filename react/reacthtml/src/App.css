@@ -1,0 +1,751 @@
+/* Grundläggande reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Afacad";
+  letter-spacing: 0.1rem;
+}
+
+body {
+  height: 100%;
+}
+
+.container {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding-top: 6.6rem;
+  padding-bottom: 2rem;
+}
+
+iconify-icon {
+  font-size: 1.6rem;
+}
+
+header {
+  position: fixed;
+  background-color: white;
+  width: 100%;
+  height: 4.6rem;
+  top: 0;
+  z-index: 1000;
+  color: #383055;
+}
+
+.activeLink {
+  text-shadow: 0px 4px 10px rgba(0, 0, 0, 0.6);
+}
+
+header.scrolled {
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  height: 100%;
+}
+
+.sidemenu {
+  position: fixed;
+  transform: translateX(-350px);
+  left: 0;
+  bottom: 0;
+  height: calc(100vh - 4.6rem);
+  background-color: #4e4e4e;
+  padding: 0.4rem 1rem;
+  transition: all 0.5s ease;
+  line-height: 50px;
+  color: #fff;
+  display: none;
+}
+
+.sidemenu.active {
+  transform: translateX(0);
+  width: 350px;
+  opacity: 1;
+  z-index: 1000;
+}
+
+.btn {
+  display: none;
+  border: none;
+  background-color: unset;
+}
+
+.topMobile {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  gap: 0 1rem;
+}
+
+.sidemenu ul li {
+  list-style-type: none;
+  display: block;
+  text-align: center;
+  margin: 1rem auto;
+  line-height: 50px;
+}
+
+.sidemenu.active ul li {
+  height: 50px;
+  margin: 1.8rem auto;
+}
+
+.sidemenu.active ul li a {
+  display: flex;
+  gap: 0 1.3rem;
+  font-size: 1.2rem;
+  align-items: center;
+  padding: 0 1rem;
+  width: fit-content;
+  line-height: 50px;
+}
+
+.sidemenu.active ul li a iconify-icon {
+  font-size: 2rem;
+}
+
+.sidemenu.active ul li a:hover {
+  background: #ffffff;
+  color: #4e4e4e;
+  border-radius: 0.8rem;
+  text-shadow: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.nav {
+  display: flex;
+  list-style-type: none;
+  overflow: hidden;
+  height: 100%;
+  gap: 0 2rem;
+}
+
+li {
+  display: block;
+  height: 100%;
+  align-content: center;
+}
+
+li a {
+  font-size: 1.05rem;
+}
+
+li a:hover {
+  text-shadow: 0px 4px 10px rgba(0, 0, 0, 0.6);
+}
+
+button:hover {
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+button {
+  cursor: pointer;
+}
+
+.logo {
+  height: 4.35rem;
+}
+
+.socialIcons {
+  display: flex;
+  gap: 1rem;
+}
+
+.blockRow {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 2rem;
+}
+
+.blockColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+h2 {
+  font-family: Georgia;
+  font-size: 3.3rem;
+  color: #383055;
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-weight: bolder;
+}
+
+h4 {
+  font-family: Georgia;
+  font-weight: lighter;
+  color: #383055;
+  font-size: 2.25rem;
+  background-color: rgba(240, 230, 219, 0.7);
+  padding: 0.5rem 2rem 0.5rem 120px;
+  border-radius: 3px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  width: fit-content;
+  transform: translateX(-120);
+}
+
+footer {
+  display: flex;
+  background-color: #4e4e4e;
+  bottom: 0;
+  width: 100%;
+  color: #f0e6db;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+  height: 4.6rem;
+}
+
+/* -------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+/* Startsida */
+
+.bakgrundStartsida {
+  background-image: url("/public/bilder/HeroStartsida.png");
+  background-attachment: fixed;
+  background-position: top;
+  background-size: cover;
+  height: 100%;
+}
+
+.block1Startsida {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.6rem;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 170px auto 0;
+}
+
+.buttonStartsida {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 5rem 10rem;
+  margin-top: 4rem;
+  align-items: center;
+}
+
+.buttonStartsida > a {
+  background-color: rgba(241, 231, 219, 0.25);
+  width: 19rem;
+  height: 3.1rem;
+  border: none;
+  border-radius: 3px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  align-content: center;
+  font-size: 1.25rem;
+  color: white;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-family: Georgia;
+  font-weight: lighter;
+  color: white;
+}
+
+.block1Startsida p {
+  font-size: 1.125rem;
+  color: white;
+}
+
+/* -------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+/* Våra Hästar */
+
+.bakgrundVaraHastar {
+  background-image: url("/public/Former/63.png");
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.hastar {
+  display: flex;
+  gap: 3rem 6rem;
+  margin-top: 1rem;
+}
+
+.hastbilder {
+  display: grid;
+  gap: 1.25rem 1.9rem;
+  grid-template-columns: 160px 160px 160px;
+  text-align: center;
+  margin-top: 0.5rem;
+}
+
+.hastbilder div {
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  background-color: white;
+  padding: 0.6rem;
+}
+
+.hastbilder div p {
+  padding-top: 0.6rem;
+}
+
+.hastbilder img {
+  width: 100%;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6); /* Mörklägger bakgrunden */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 99;
+}
+
+.hastbilder div.pop {
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%) scale(0.6);
+  position: absolute;
+  z-index: 100;
+  transition: all 0.5s ease;
+  padding: 1.2rem;
+}
+
+.hastbilder div.pop p {
+  padding-top: 1rem;
+  font-size: 2.1rem;
+}
+
+/* -------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+/* Om Oss */
+
+.heroOmOss {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-image: url("/public/bilder/Nordmalings_Ridklubb1.png");
+  background-attachment: scroll;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 30rem;
+  width: 100vw;
+  margin: 0 auto;
+  margin-bottom: 2rem;
+}
+
+.textrutor {
+  display: flex;
+  gap: 0 5rem;
+  align-items: baseline;
+}
+
+.textrutorStyrelsen {
+  display: flex;
+  gap: 0 4rem;
+}
+
+#blockUS {
+  align-items: flex-start;
+}
+
+.värdegrunder {
+  font-size: 1.3rem;
+  margin-bottom: 0.3rem;
+}
+
+/* Horisontell linje */
+.horisontellLinje1 {
+  width: 85vw;
+  height: 1px;
+  background-color: rgb(0, 0, 0, 0.2);
+  margin: 2rem auto;
+}
+
+.block2 {
+  display: flex;
+  text-decoration: underline;
+  margin: 0.3rem 0;
+}
+
+.block2 img {
+  height: 30hv;
+  margin-right: 0.5rem;
+}
+
+/* -------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+/* Tävling */
+
+.verticalLine3 {
+  width: 1px;
+  height: 70vh;
+  margin: 0 5rem;
+  background-color: rgb(0, 0, 0, 0.2);
+}
+
+video {
+  width: 35rem;
+}
+
+.tävlingsfilm {
+  display: flex;
+}
+
+#videotext {
+  color: rgb(0, 0, 0, 0.4);
+  font-size: 0.8rem;
+}
+
+.blockColumn span {
+  font-weight: bolder;
+}
+
+table {
+  border-spacing: 0.5rem;
+}
+
+th,
+td {
+  text-align: left;
+  margin-bottom: 1rem;
+}
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------------ */
+/* Börja Rida */
+
+.registrera {
+  background-color: #383055;
+  color: #f0e6db;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  text-align: center;
+  margin: 2rem auto;
+  padding: 0.9rem 2rem;
+  width: fit-content;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.bakgrundText {
+  background-color: rgba(240, 230, 219, 0.7);
+  border-radius: 5px;
+  width: fit-content;
+  text-align: right;
+  align-content: center;
+  padding: 0.8rem 2rem;
+  margin-right: 0;
+}
+
+.ellipseText {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  margin: 8rem 1rem 6rem;
+}
+
+.ellipseText div {
+  background-color: rgba(240, 230, 219, 0.7);
+  border-radius: 50%;
+  width: 100%;
+  aspect-ratio: 1/1;
+  padding: 2rem;
+}
+
+.ellipseText h2 {
+  padding-left: 3.5rem;
+  padding-bottom: 0.4rem;
+  font-family: "Afacad";
+  font-size: 5vw;
+  width: fit-content;
+}
+
+.ellipseText p {
+  font-size: 1.3vw;
+  text-align: center;
+  align-items: center;
+}
+
+.ellipseText span {
+  font-style: italic;
+}
+
+.ellipseText div:first-child {
+  transform: translateY(-20%);
+}
+
+.ellipseText div:last-child {
+  transform: translateY(20%);
+}
+
+/* -------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+/* Kontakt */
+
+.hittaHit div {
+  display: flex;
+  gap: 1rem;
+  margin: 1rem;
+}
+
+.kontaktImg {
+  height: 1.1rem;
+}
+
+form {
+  width: 30rem;
+  box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.2);
+  margin-bottom: 5rem;
+}
+
+form input,
+textarea {
+  width: 26.8rem;
+  min-height: 1.8rem;
+  height: auto;
+  background-color: #f0e6db;
+  border: none;
+  border-radius: 3px;
+  padding: 0.5rem 1rem;
+  resize: vertical;
+  margin: 1.5rem 0;
+}
+
+textarea {
+  field-sizing: content;
+  max-height: calc(10lh + 0.5rem);
+  min-height: 5lh;
+  width: 100%;
+}
+
+#submit {
+  box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+.formMargin {
+  margin: 0 1.5rem;
+}
+
+.formMargin h3 {
+  text-align: center;
+}
+
+.centerForm {
+  padding: 0;
+}
+
+/* -------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+/* Kalender */
+.imgKalender {
+  width: 70vw;
+  margin: 0 auto;
+}
+
+/* -------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+/* Responsivitet - Mobil */
+
+@media screen and (max-width: 1200px) {
+  .blockRow {
+    flex-direction: column;
+  }
+
+  .blockColumn {
+    gap: 1rem;
+    margin: 0 3rem;
+  }
+
+  /*Header*/
+  .logo {
+    margin: 0 1rem;
+  }
+  .socialIcons {
+    margin-right: 4%;
+  }
+
+  section .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 2rem;
+  }
+
+  h3 {
+    text-align: center;
+  }
+
+  /* Våra Hästar*/
+  .hastar {
+    flex-direction: column;
+  }
+
+  .hastbilder div.pop {
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%) scale(0.8);
+
+    position: absolute;
+    z-index: 1;
+    transition: all 0.5s ease;
+    padding: 0.8rem;
+  }
+
+  .hastbilder div.pop p {
+    padding-top: 0.8rem;
+    font-size: 1.2rem;
+  }
+
+  /*Tävling*/
+  .verticalLine3 {
+    width: 85vw;
+    height: 1px;
+    margin: 3rem auto;
+  }
+
+  video {
+    width: 100%;
+  }
+
+  /*Kontakt*/
+  .hittaHit {
+    justify-items: center;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .centerForm {
+    margin: auto auto;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  /*Menu*/
+  header li {
+    display: none;
+  }
+
+  icconi-icon {
+    font-size: 1rem;
+  }
+
+  .sidemenu {
+    display: block;
+  }
+
+  .btn {
+    display: block;
+  }
+
+  .btn:hover {
+    box-shadow: none;
+  }
+
+  .buttonStartsida {
+    grid-template-columns: auto;
+    gap: 3rem;
+    margin-top: 5rem;
+  }
+
+  .block1Startsida p {
+    font-size: 1rem;
+  }
+
+  .socialIcons {
+    margin-right: 6%;
+  }
+
+  /*Tävling*/
+  .blockColumn {
+    align-items: center;
+  }
+
+  /*Om Oss*/
+  .textrutor {
+    flex-direction: column;
+    gap: 2rem;
+    margin: 0 auto;
+  }
+  .textrutorStyrelsen {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+  .textrutorStyrelsen p {
+    text-align: center;
+  }
+
+  h4 {
+    padding: 0.5rem 2rem;
+    transform: translateX(0);
+    align-items: center;
+  }
+
+  h3 {
+    align-self: center;
+  }
+
+  /*Börja Rida*/
+
+  .ellipseText {
+    flex-direction: column;
+    justify-content: center;
+    margin: 4rem 0;
+    gap: 1rem;
+  }
+
+  .ellipseText div {
+    width: 40%;
+  }
+
+  .ellipseText div:first-child {
+    transform: translateY(0);
+  }
+
+  .ellipseText div:last-child {
+    transform: translateY(0);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .blockColumn {
+    margin: 0 1rem;
+  }
+
+  /* Våra Hästar - Mobil*/
+  .hastbilder {
+    grid-template-columns: 190px 190px;
+  }
+
+  .hastbilder div.pop {
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%) scale(1.2);
+
+    position: absolute;
+    z-index: 1;
+    transition: all 0.5s ease;
+    padding: 0.8rem;
+  }
+
+  .hastbilder div.pop p {
+    padding-top: 0.8rem;
+    font-size: 1.2rem;
+  }
+}
