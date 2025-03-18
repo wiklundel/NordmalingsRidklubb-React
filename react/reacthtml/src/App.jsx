@@ -1,4 +1,4 @@
-import Home from "./pages/Index";
+import Home from "./pages/Home";
 import OmOss from "./pages/OmOss";
 import Tavling from "./pages/Tavling";
 import Kalender from "./pages/Kalender";
