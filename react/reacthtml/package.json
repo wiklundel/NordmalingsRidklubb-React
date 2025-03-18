@@ -2,6 +2,7 @@
   "name": "reacthtml",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://wiklundel.github.io/NordmalingsRidklubb-React",
   "dependencies": {
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.6.3",
@@ -49,7 +50,5 @@
   },
   "devDependencies": {
     "@types/jquery": "^3.5.32"
-  },
-
-  "homepage": "https://wiklundel.github.io/NordmalingsRidklubb-React/"
+  }
 }

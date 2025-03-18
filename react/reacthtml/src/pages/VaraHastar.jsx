@@ -26,7 +26,12 @@ function VaraHastar() {
       alt: "Ponnyn Blackie",
       name: "Blackie",
     },
-    { id: 5, src: "bilder/Emiley.png", alt: "Ponnyn Emiley", name: "Emiley" },
+    {
+      id: 5,
+      src: "bilder/Emiley.png",
+      alt: "Ponnyn Emiley",
+      name: "Emiley",
+    },
     {
       id: 6,
       src: "bilder/Sarah(Zally).png",

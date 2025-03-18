@@ -32,7 +32,7 @@ function Header() {
       <div className="container">
         <div className="topMobile">
           <img
-            src="/bilder/Logga.png"
+            src="bilder/Logga.png"
             alt="Logga Nordmalings Ridklubb"
             className="logo"
           />
