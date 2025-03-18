@@ -8,7 +8,6 @@ function Home() {
         <div className="container">
           <div className="block1Startsida">
             <p title="det här är en slogan">
-              {" "}
               den lilla klubben med det stora hjärtat
             </p>
             <h1>Nordmalings Ridklubb</h1>
